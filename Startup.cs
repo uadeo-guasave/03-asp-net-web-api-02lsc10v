@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebAPI.Examples;
 
 namespace WebAPI
 {
@@ -25,6 +26,11 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Tiempo de vida
+            // Transient: por cada solicitud se entrega una instancia
+            // Scoped: una instancia se comparte en todo el controlador
+            // Singleton: una instancia para toda la aplicacion
+            services.AddTransient<IClases, Dos>();
             services.AddControllers();
         }
 
