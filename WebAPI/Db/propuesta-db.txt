@@ -1,0 +1,52 @@
+Pagos en linea
+Clientes (usuarios del servicio de agua)
+    Cuenta
+    Contrato
+    Medidor
+    Clave de localizacion
+    Nombres
+    Apellidos
+    Telefono
+    Correo electronico
+    Domicilio
+        Calle principal
+        Calle A
+        Calle B
+        Numero exterior
+        Numero interior
+        Codigo postal
+        Municipio
+        Localidad
+        Colonia
+Recibos
+    Periodo de facturacion
+    Fecha de inicio
+    Fecha de lectura
+    Lectura anterior
+    Lectura actual
+    Consumo (m3)
+    Meses de adeudo
+    Costos ($)
+        Consumo ($)
+        Drenaje
+        Saneamiento
+        Bomberos
+        Cruz Roja
+        Multas
+        Recargos
+        Importe total
+Pagos
+    Registro
+    Comprobante
+        Folio
+        Datos del cliente
+        Periodo
+        Datos de pago
+            Nombre del titular
+            Tarjeta
+            Autorizacion
+            Fecha de pago
+            Banco
+            Importe
+        Conceptos del pago
+    Reportes gerenciales
