@@ -10,7 +10,7 @@ namespace WebAPI.Models
         public int LecturaActual { get; set; }
         public int ConsumoEnM3 { get; set; }
         public int MesesDeAdeudo { get; set; }
-        public double ConsumoDeAgua { get; set; }
+        public double Consumo { get; set; }
         public double Drenaje { get; set; }
         public double Saneamiento { get; set; }
         public double Bomberos { get; set; }
@@ -18,8 +18,10 @@ namespace WebAPI.Models
         public double Multas { get; set; }
         public double Recargos { get; set; }
         public double ImporteTotal { get; set; }
-        public int ClienteId { get; set; }
+        public int ClienteCuenta { get; set; }
+        public int PagoFolio { get; set; }
 
         public Cliente Cliente { get; set; }
+        public Pago Pago { get; set; }
     }
 }

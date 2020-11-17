@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebAPI.DbContexts;
 using WebAPI.Examples;
 
 namespace WebAPI
@@ -30,7 +31,8 @@ namespace WebAPI
             // Transient: por cada solicitud se entrega una instancia
             // Scoped: una instancia se comparte en todo el controlador
             // Singleton: una instancia para toda la aplicacion
-            services.AddTransient<IClases, Dos>();
+            // services.AddTransient<IClases, Dos>();
+            services.AddDbContext<SqliteDbContext>();
             services.AddControllers();
         }
 

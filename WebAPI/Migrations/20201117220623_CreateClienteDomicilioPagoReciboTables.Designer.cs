@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPI.DbContexts;
 
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(SqliteDbContext))]
-    partial class SqliteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201117220623_CreateClienteDomicilioPagoReciboTables")]
+    partial class CreateClienteDomicilioPagoReciboTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,7 +21,7 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Models.Cliente", b =>
                 {
                     b.Property<int>("Cuenta")
-                        .ValueGeneratedOnAdd()
+                        // .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Apellidos")
