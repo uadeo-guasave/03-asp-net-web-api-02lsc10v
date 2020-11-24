@@ -20,6 +20,7 @@ namespace WebAPI.Models
         public double ImporteTotal { get; set; }
         public int ClienteCuenta { get; set; }
         public int PagoFolio { get; set; }
+        public bool Pagado { get; set; }
 
         public Cliente Cliente { get; set; }
         public Pago Pago { get; set; }
